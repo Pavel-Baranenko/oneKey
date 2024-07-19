@@ -1,0 +1,90 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px;
+}
+
+.item {
+  span {
+    display: inline-block;
+    margin: 30px 0 20px 0;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 100%;
+    color: #000;
+
+    b {
+      line-height: 100%;
+      color: #00f;
+    }
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #3b4a69;
+  }
+}
+
+@media (min-width: 1080px) {
+  .item span b {
+    display: block;
+  }
+
+}
+
+@media (max-width: 1080px) {
+
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    img {
+      width: 220px;
+      height: auto;
+    }
+
+    span {
+      margin: 0 0 20px 0;
+      font-size: 28px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+
+    img {
+      max-width: 400px;
+      width: 81.25%;
+      height: auto;
+    }
+
+    span {
+      margin: 0 0 10px 0;
+      font-size: 22px;
+    }
+  }
+
+  .howitworks {
+    margin-top: 55px;
+  }
+}

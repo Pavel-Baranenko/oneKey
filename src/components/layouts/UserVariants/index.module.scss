@@ -1,0 +1,153 @@
+.box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 30px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(90deg, #3d4e81 0%, #5753c9 48%, #6e7ff3 100%);
+  border-radius: 24px;
+
+
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, #3d4e81 0%, #5753c9 48%, #6e7ff3 100%);
+    transition: all 0.4s ease-in;
+    z-index: 1;
+    opacity: 1;
+  }
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(-90deg, #537895 0%, #09203f 100%);
+    transition: all 0.4s ease-in-out;
+    z-index: 2;
+    opacity: 0;
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    left: 30px;
+  }
+
+  span {
+    color: #fff;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 120%;
+    position: relative;
+    z-index: 4;
+  }
+}
+
+.link:last-child {
+  background: linear-gradient(90deg, #537895 0%, #09203f 100%);
+
+  &::after {
+    background: linear-gradient(90deg, #537895 0%, #09203f 100%);
+  }
+
+  &::before {
+    background: linear-gradient(-90deg, #3d4e81 0%, #5753c9 48%, #6e7ff3 100%);
+  }
+
+}
+
+.active {
+  .link {
+    &::after {
+      opacity: 0;
+    }
+
+    &::before {
+      opacity: 1;
+    }
+
+
+  }
+
+  .link:last-child {
+    &::after {
+      opacity: 0;
+
+    }
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+}
+
+@media (max-width: 1080px) {
+  .link {
+    padding-left: 15px;
+    height: 125px;
+
+    svg {
+      max-width: calc(100% + 40px);
+      height: 99%;
+    }
+
+    span {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .box {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+
+  .link {
+    padding-left: 15px;
+    height: 111px;
+
+    svg {
+      max-width: none;
+      height: 98%;
+      width: auto;
+      left: unset;
+      right: 0;
+    }
+
+  }
+}
+
+@media (max-width: 430px) {
+
+
+  .link {
+
+    svg {
+      height: 98%;
+      right: unset;
+      left: 0;
+      width: calc(100% + 40px);
+    }
+
+  }
+}

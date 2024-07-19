@@ -1,0 +1,195 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 615px;
+  gap: 15px;
+}
+
+.item {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 11px 30px;
+
+  span {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 120%;
+    text-align: center;
+    color: #0000e6;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    color: #3b4a69;
+  }
+}
+
+.top {
+  position: relative;
+  text-align: center;
+  height: 49px;
+  margin-bottom: 19px;
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 72.7px;
+    height: 72.7px;
+    left: -36.35px;
+    top: -17.35px;
+    background-image: url(../../../../public/img/elements/arrow-label.svg);
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px;
+
+  span {
+    display: block;
+    margin: 20px 0;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    color: #131313;
+
+    b {
+      color: #00f;
+    }
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #3b4a69;
+  }
+}
+
+@media (max-width: 1080px) {
+  .wrap {
+    flex-direction: column;
+    justify-content: center;
+    padding: 57.5px 65px;
+    gap: 40px;
+  }
+
+  .houses {
+    width: 100%;
+    height: auto;
+  }
+
+  .box {
+    max-width: 100%;
+  }
+
+  .inner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 40px;
+
+    .column {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      height: fit-content;
+      gap: 20px;
+    }
+
+    svg {
+      height: 40px;
+      width: auto;
+    }
+
+    span {
+      margin: 0;
+    }
+
+  }
+}
+
+@media (max-width: 768px) {
+  .couters {
+    overflow-x: hidden;
+
+    :global {
+      .wrap-linear-section {
+        width: calc(100% + 20px);
+        margin-left: -10px;
+      }
+    }
+  }
+
+  .wrap {
+    flex-direction: column;
+    justify-content: center;
+    padding: 27px 22px;
+    gap: 20px;
+
+  }
+
+  .houses {
+    width: 100%;
+    height: auto;
+  }
+
+  .box {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .item {
+    border-radius: 20px;
+    padding: 17px 50px;
+  }
+
+  .top {
+    position: relative;
+    text-align: center;
+    height: 49px;
+    margin-bottom: 19px;
+
+    &::before {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 72.7px;
+      height: 72.7px;
+      left: -56.35px;
+      top: -23.35px;
+      background-image: url(../../../../public/img/elements/arrow-label.svg);
+    }
+  }
+
+  .inner {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px 40px;
+
+    .column {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      height: fit-content;
+      gap: 15px;
+    }
+
+    svg {
+      height: 40px;
+      width: auto;
+    }
+
+    span {
+      font-size: 22px;
+    }
+
+  }
+}

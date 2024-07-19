@@ -1,0 +1,162 @@
+.top {
+  background: #2a344a;
+  padding: 40px 0 60px 0;
+}
+
+.grid {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.column {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #7786a5;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &:nth-child(1) {
+    max-width: 207px;
+  }
+
+  &:nth-child(3) {
+    max-width: 260px;
+  }
+
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.link {
+  border-radius: 10px;
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  background: #3a465d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.05em;
+  color: #f1f7ff;
+}
+
+.group {
+  display: flex;
+  gap: 78px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tg {
+  background: #3a465d;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  padding: 15px 36px;
+  font-size: 16px;
+  line-height: 125%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+/*----Bottom-------------------------------*/
+
+.bottom {
+  padding: 30px 0 40px 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #7786a5;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  p {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .group {
+    display: flex;
+    gap: 38px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .grid {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .top {
+    border-radius: 10px;
+    padding: 40px 30px;
+  }
+
+  .group {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .column {
+    width: 100%;
+
+    &:nth-child(1) {
+      flex-direction: row;
+      align-items: center;
+      gap: 39px;
+      max-width: none;
+      justify-content: center;
+    }
+
+    &:nth-child(3) {
+      text-align: center;
+      justify-content: center;
+    }
+  }
+
+  .socials {
+    justify-content: center;
+  }
+
+  .title {
+    display: none;
+  }
+
+  .bottom {
+    padding: 30px;
+  }
+
+  .inner {
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+  }
+}

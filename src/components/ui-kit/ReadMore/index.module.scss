@@ -1,0 +1,27 @@
+.close {
+  p {
+    font-size: 16px;
+    color: #3B4A69;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+  }
+
+  button {
+    margin-top: 14px;
+    color: #4E6AF3;
+    text-decoration: underline;
+  }
+}
+
+.open {
+  p {
+    font-size: 16px;
+    color: #3B4A69;
+    line-height: 1.5;
+    display: block;
+    overflow: unset;
+  }
+}
