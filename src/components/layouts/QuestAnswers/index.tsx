@@ -87,7 +87,7 @@ const QuestAnswers = () => {
               <p>If you haven’t found the answer to your question, then write to support <a href="./">support </a></p>
             </div>
 
-            <img src="../img/static/feedback.svg" alt="" />
+            <img src="img/static/feedback.svg" alt="" />
           </div>
         </div>
       </div>
