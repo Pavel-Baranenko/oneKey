@@ -18,25 +18,25 @@ const Header = () => {
             </button>
           }
 
-          <object data="img/logo.svg" type="image/svg+xml" className='logo'></object>
+          <img src="img/logo.svg" className='logo'></img>
 
           {!mediaIs1024 &&
             <>
               <nav className="header__nav">
                 <a href="./" className="header__link">
-                  <object data="../img/icons/about.svg" type="image/svg+xml"></object>
+                  <img src="img/icons/about.svg" ></img>
                   <span>about Us</span>
                 </a>
                 <a href="./" className="header__link">
-                  <object data="../img/icons/for-developers.svg" type="image/svg+xml"></object>
+                  <img src="img/icons/for-developers.svg"  ></img>
                   <span>for brokers</span>
                 </a>
                 <a href="./" className="header__link">
-                  <object data="../img/icons/for-customers.svg" type="image/svg+xml"></object>
+                  <img src="img/icons/for-customers.svg"  ></img>
                   <span>FOR CUSTOMERS</span>
                 </a>
                 <a href="./" className="header__link">
-                  <object data="../img/icons/faq.svg" type="image/svg+xml"></object>
+                  <img src="img/icons/faq.svg"  ></img>
                   <span>faq</span>
                 </a>
               </nav>

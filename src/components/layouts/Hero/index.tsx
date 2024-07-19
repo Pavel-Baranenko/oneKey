@@ -27,7 +27,7 @@ export default function Hero() {
               </button>
             </div>
             <div className={styles.video}>
-              <Image
+              <img
                 src="img/static/house-preview.webp"
                 width={634}
                 height={402}
