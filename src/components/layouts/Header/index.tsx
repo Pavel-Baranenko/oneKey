@@ -18,7 +18,7 @@ const Header = () => {
             </button>
           }
 
-          <object data="./img/logo.svg" type="" className='logo'></object>
+          <object data="img/logo.svg" type="" className='logo'></object>
 
           {!mediaIs1024 &&
             <>

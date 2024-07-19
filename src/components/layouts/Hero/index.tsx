@@ -28,7 +28,7 @@ export default function Hero() {
             </div>
             <div className={styles.video}>
               <Image
-                src="./img/static/house-preview.webp"
+                src="img/static/house-preview.webp"
                 width={634}
                 height={402}
                 alt="" />
